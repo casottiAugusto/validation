@@ -21,9 +21,12 @@ app.use(flash());
 
 
 app.get('/',(req,res)=>{
-  res.send("Teste")
-})
-
+  res.render("index")
+});
+app.post("/form",(req,res)=>{
+ let {email,nome,pontos}=req.body;
+ 
+});
 
 
 app.listen(8080,(res,req)=>{
