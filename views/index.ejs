@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
 
   <title>Validatoin</title>
 </head>
+
 <body>
   <form method="post" action="/form">
-    <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com"><br>
-    <input type="text" name="nome" id="nome" placeholder="Nome do sujeito"><br>
-    <input type="number" name="pontos" id="pontos" placeholder="pontos do jogo"><br>
-    <button type="submit">Enviar</button>
+    <input type="text" name="nome" id="nome" placeholder="Nome do sujeito" value="<%= nome %> "><br>
+    <%= nomeErro %> <br>
+      <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com" value="<%= email %> "><br>
+      <%= emailErro %> <br>
+        <input type="number" name="pontos" id="pontos" placeholder="pontos do jogo"value="<%= pontos %> "><br>
+        <%= pontosErro %> <br>
+          <button type="submit">Enviar</button>
   </form>
 </body>
+
 </html>
